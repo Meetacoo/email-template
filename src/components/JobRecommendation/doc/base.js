@@ -4,6 +4,14 @@ const { render: emailRender } = _EmailRender;
 const { default: CodeEditor } = monacoEditor;
 const { useState } = React;
 const { useDebouncedCallback } = _useDebounce;
+const { default: monacoLoader } = _monacoLoader;
+
+monacoLoader.config({
+  paths: {
+    vs: 'https://uc.fatalent.cn/packages/monaco-editor/0.48.0/min/vs'
+  }
+});
+
 const BaseExample = () => {
   const [data, setData] = useState({
     name: '张三',
