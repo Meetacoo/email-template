@@ -2,8 +2,8 @@
   "isFull": false,
   "list": [
     {
-      "title": "这里填写示例标题",
-      "description": "这里填写示例说明",
+      "title": "职位推荐",
+      "description": "职位推荐",
       "code": "./base.js",
       "scope": [
         {

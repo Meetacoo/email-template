@@ -11,8 +11,8 @@
 
 #### 示例代码
 
-- 这里填写示例标题
-- 这里填写示例说明
+- 职位推荐
+- 职位推荐
 - _JobRecommendation(@components/JobRecommendation),antd(antd),_EmailRender(@react-email/render)
 
 ```jsx
