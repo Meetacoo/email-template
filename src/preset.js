@@ -25,7 +25,7 @@ remoteLoaderPreset({
     'components-iconfont': {
       ...registry,
       remote: 'components-iconfont',
-      defaultVersion: '0.1.3'
+      defaultVersion: '0.1.4'
     },
     'email-template':
       process.env.NODE_ENV === 'development'
