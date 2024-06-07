@@ -25,6 +25,10 @@
         {
           "name": "_useDebounce",
           "packageName": "use-debounce"
+        },
+        {
+          "name": "_monacoLoader",
+          "packageName": "@monaco-editor/loader"
         }
       ]
     }
