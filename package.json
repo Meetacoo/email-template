@@ -1,6 +1,6 @@
 {
   "name": "@kne-components/email-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "提供用于发送email的内容模板",
   "scripts": {
     "init": "husky",
@@ -83,6 +83,7 @@
   },
   "dependencies": {
     "@react-email/components": "^0.0.19",
-    "@react-email/render": "^0.0.15"
+    "@react-email/render": "^0.0.15",
+    "use-debounce": "^10.0.1"
   }
 }
