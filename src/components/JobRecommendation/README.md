@@ -32,35 +32,40 @@ monacoLoader.config({
 
 const BaseExample = () => {
   const [data, setData] = useState({
-    name: '张三', companyName: 'XX公司', positionList: [{
-      name: '多模态大模型算法工程师',
-      salary: '30-60K·16薪',
-      link: 'https://www.baidu.com',
-      tags: ['某大型上市互联网公司', '上海', '本科', '3-5年']
-    }, {
-      name: '多模态大模型算法工程师',
-      salary: '30-60K·16薪',
-      link: 'https://www.baidu.com',
-      tags: ['某大型上市互联网公司', '上海', '本科', '3-5年']
-    }, {
-      name: '多模态大模型算法工程师',
-      salary: '30-60K·16薪',
-      link: 'https://www.baidu.com',
-      tags: ['某大型上市互联网公司', '上海', '本科', '3-5年']
-    }]
+    name: '张三',
+    companyName: 'XX公司',
+    positionList: [
+      {
+        name: '多模态大模型算法工程师',
+        salary: '30-60K·16薪',
+        link: 'https://www.baidu.com',
+        tags: ['某大型上市互联网公司', '上海', '本科', '3-5年']
+      },
+      {
+        name: '多模态大模型算法工程师',
+        salary: '30-60K·16薪',
+        link: 'https://www.baidu.com',
+        tags: ['某大型上市互联网公司', '上海', '本科', '3-5年']
+      },
+      {
+        name: '多模态大模型算法工程师',
+        salary: '30-60K·16薪',
+        link: 'https://www.baidu.com',
+        tags: ['某大型上市互联网公司', '上海', '本科', '3-5年']
+      }
+    ]
   });
   const setCode = useDebouncedCallback(code => {
     try {
       setData(JSON.parse(code));
-    } catch (e) {
-    }
+    } catch (e) {}
   }, 500);
 
-  return (<Space direction="vertical">
+  return (
+    <Space direction="vertical">
       <JobRecommendation {...data} />
       <div>data:</div>
-      <CodeEditor height="400px" defaultLanguage="json" defaultValue={JSON.stringify(data, null, 2)}
-                  onChange={setCode} />
+      <CodeEditor height="400px" defaultLanguage="json" defaultValue={JSON.stringify(data, null, 2)} onChange={setCode} />
       <div>html:</div>
       <div>
         {emailRender(<JobRecommendation {...data} />, {
@@ -73,7 +78,8 @@ const BaseExample = () => {
           plainText: true
         })}
       </div>
-    </Space>);
+    </Space>
+  );
 };
 
 render(<BaseExample />);
