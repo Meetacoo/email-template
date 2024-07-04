@@ -14,19 +14,16 @@ const InvitingEvaluation = ({ name, link }) => {
       >
         <Container className="max-w-[800px]">
           <Text className="mt-[41px] mb-[16px] text-[#222222] text-[18px]">
-            Hi，{name}
+            {name}，您好
           </Text>
           <Text className="mt-0 mb-[4px] text-[#222222] text-[16px]">
-            诚邀您参加智能测评。
+            我们诚挚地邀请您加入AI智能陪练，您可以通过以下链接开始体验：
           </Text>
-          <Text className="mt-0 mb-[4px] text-[16px]">
-            <Text className="font-bold m-0 inline-block">智能测评链接如下</Text>
-            <Link href={link} className="mt-0 ml-[8px] font-medium text-[#4F185A]">
-              {link}
-            </Link>
-          </Text>
+          <Link href={link} className="mt-0 font-medium text-[#4F185A]">
+            {link}
+          </Link>
           <Text className="mt-0 text-[#222222] text-[16px]">
-            如点击链接未响应，可复制链接至浏览器中打开。
+            感谢您的参与，期待您的宝贵反馈。
           </Text>
           <Section className="h-[71px]" />
         </Container>
