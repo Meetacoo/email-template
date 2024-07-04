@@ -1,0 +1,36 @@
+{
+  "isFull": false,
+  "list": [
+    {
+      "title": "这里填写示例标题",
+      "description": "这里填写示例说明",
+      "code": "./base.js",
+      "scope": [
+        {
+          "name": "_InvitingEvaluation",
+          "packageName": "@components/InvitingEvaluation"
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        },
+        {
+          "name": "_EmailRender",
+          "packageName": "@react-email/render"
+        },
+        {
+          "name": "monacoEditor",
+          "packageName": "@monaco-editor/react"
+        },
+        {
+          "name": "_useDebounce",
+          "packageName": "use-debounce"
+        },
+        {
+          "name": "_monacoLoader",
+          "packageName": "@monaco-editor/loader"
+        }
+      ]
+    }
+  ]
+}
