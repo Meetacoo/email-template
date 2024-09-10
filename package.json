@@ -1,6 +1,6 @@
 {
   "name": "@kne-components/email-template",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "提供用于发送email的内容模板",
   "scripts": {
     "init": "husky",
