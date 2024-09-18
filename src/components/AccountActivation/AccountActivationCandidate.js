@@ -1,9 +1,11 @@
-import {Link, Text} from '@react-email/components';
-import AccountContainer from "./AccountContainer";
+import { Link, Text } from '@react-email/components';
+import AccountContainer from './AccountContainer';
+import CommonInfoDetail from './CommonInfoDetail';
 
 const AccountActivationCandidate = ({ link, ...props }) => {
   return (
-    <AccountContainer {...props}>
+    <AccountContainer>
+      <CommonInfoDetail {...props} />
       <Text className="mt-[36px] text-[#222222] text-[16px] leading-[22px]">
         欢迎使用LHH FESCO的职业咨询服务，为了保障您的权益和咨询效果，请您详细阅读
         <Link href={link} className="text-[16px] leading-[22px] text-[#165DFF]">
