@@ -16,10 +16,10 @@
 - _AccountActivation(@components/AccountActivation),antd(antd),_EmailRender(@react-email/render),monacoEditor(@monaco-editor/react),_useDebounce(use-debounce),_monacoLoader(@monaco-editor/loader)
 
 ```jsx
-const {AccountActivationCandidate, AccountActivationCoach} = _AccountActivation;
-const {Space, Radio} = antd;
-const {render: emailRender} = _EmailRender;
-const {useState} = React;
+const { AccountActivationCandidate, AccountActivationCoach, default: AccountContainer, renderAccountContainer } = _AccountActivation;
+const { Space, Radio } = antd;
+const { render: emailRender } = _EmailRender;
+const { useState } = React;
 const { default: CodeEditor } = monacoEditor;
 const { useDebouncedCallback } = _useDebounce;
 const { default: monacoLoader } = _monacoLoader;
@@ -31,6 +31,7 @@ monacoLoader.config({
 });
 
 const initData = {
+  basic: {},
   coach: {
     name: 'Coach',
     enName: 'Coach En',
@@ -46,10 +47,15 @@ const initData = {
     initPwd: 'better888',
     loginUrl: `http://crn.test.fatalent.cn/account/login?role=candidate`
   }
-}
+};
 
-const AccountActivation = ({data, role}) => {
+const AccountActivation = ({ data, role }) => {
   switch (role) {
+    case 'basic':
+      const str = renderAccountContainer(
+        `<h2 style=\\"text-align:center;\\">ssssss</h2><p style=\\"text-align:center;\\">&nbsp;</p><p>ssssssss</p><ol><li><a href=\\"https://www.baidu.com\\">222</a></li><li>fff</li></ol><p><span style=\\"background-color:hsl(270, 75%, 60%);\\">sss</span></p>`
+      );
+      return <div dangerouslySetInnerHTML={{ __html: str }} />;
     case 'coach':
       return <AccountActivationCoach {...data} />;
     case 'candidate':
@@ -68,15 +74,16 @@ const BaseExample = () => {
     } catch (e) {}
   }, 500);
 
-  const onChangeRole = (e) => {
+  const onChangeRole = e => {
     const roleType = e?.target.value;
     setRole(roleType);
     setData(initData[roleType]);
   };
 
   return (
-    <Space direction='vertical' size={24}>
+    <Space direction="vertical" size={24}>
       <Radio.Group onChange={onChangeRole} value={role}>
+        <Radio.Button value="basic">基础框架</Radio.Button>
         <Radio.Button value="candidate">候选人</Radio.Button>
         <Radio.Button value="coach">教练</Radio.Button>
       </Radio.Group>
@@ -99,7 +106,7 @@ const BaseExample = () => {
   );
 };
 
-render(<BaseExample/>);
+render(<BaseExample />);
 
 ```
 
